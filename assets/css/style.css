@@ -1,0 +1,5 @@
+.jumbotron { 
+  background-image: url("../img/train.png");
+  background-size: cover;
+  background-position: 0% 40%;
+}
