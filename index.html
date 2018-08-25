@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <title>Train Scheduler</title>
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  
+  <!-- Moment.js Reference -->
+  <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <!-- Scheduler Script -->
+<script src="./assets/js/schedulerLogic.js"></script>
+</head>
+
+<body>
+  
+  <!-- Employee Tracker -->
+  <div class="container">
+    
+    <!-- Jumbotron -->
+    <div class="jumbotron" style="background-color: grey; color: white">
+      <h1 class="text-center">Simple Train Scheduler</h1>
+      <h3 class="text-center">A Simple reoccuring event scheduling tool.</h3>
+    </div>
+    
+    <div class="row">
+      
+      <div class="col-lg-12">
+        
+        <!-- Current Employees-->
+        <div class="card card-primary border-primary">
+          <div class="card-heading text-white bg-primary">
+            <h3 class="card-title">Current Train Schedule</h3>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover" id='train-table'>
+              <thead>
+                <tr>
+                  <th>Event Name</th>
+                  <th>Destination</th>
+                  <th>Frequency (min)</th>
+                  <th>Next Arrival (EST)</th>
+                  <th>Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Add Item  -->
+      <div class="card card-primary">
+        <div class="card-heading text-white bg-primary">
+          <h3 class="card-title">Add Train</h3>
+        </div>
+        <div class="card-body">
+          
+          <!-- Entry Form -->
+          <form>
+            <div class="form-group row">
+              <label for="item-name-input">Train Name</label>
+              <input class="form-control" id="item-name-input" type="text">
+            </div>
+            <div class="form-group row">
+              <label for="role-input">Destination</label>
+              <input class="form-control" id="dest-input" type="text">
+            </div>
+            <div class="form-group row">
+              <label for="start-input">First Train Time (HH:mm <i>Military Time</i>)</label>
+              <input class="form-control" id="start-input" type="text">
+            </div>
+            <div class="form-group row">
+              <label for="rate-input">Frequency</label>
+              <input class="form-control" id="rate-input" type="text">
+            </div>
+            <button class="btn btn-primary" id="add-item-btn" type="submit">Submit</button>
+          </form>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</div>
+
+</div>
+
+</body>
+
+</html>
