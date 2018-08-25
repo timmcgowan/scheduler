@@ -28,15 +28,14 @@
   <div class="container">
     
     <!-- Jumbotron -->
-    <div class="jumbotron" style="background-color: grey; color: white">
+    <div class="jumbotron" style="background-color: green; color: white">
       <h1 class="text-center">Simple Train Scheduler</h1>
       <h3 class="text-center">A Simple reoccuring event scheduling tool.</h3>
     </div>
     
     <div class="row">
       
-      <div class="col-lg-12">
-        
+      <div class="col-lg-8">
         <!-- Current Employees-->
         <div class="card card-primary border-primary">
           <div class="card-heading text-white bg-primary">
@@ -59,14 +58,13 @@
           </div>
         </div>
       </div>
-      
+   <div class="col-lg-4">   
       <!-- Add Item  -->
-      <div class="card card-primary">
-        <div class="card-heading text-white bg-primary">
+      <div class="card card-success">
+        <div class="card-heading text-white bg-success">
           <h3 class="card-title">Add Train</h3>
         </div>
-        <div class="card-body">
-          
+        <div class="card-body">       
           <!-- Entry Form -->
           <form>
             <div class="form-group row">
@@ -78,7 +76,7 @@
               <input class="form-control" id="dest-input" type="text">
             </div>
             <div class="form-group row">
-              <label for="start-input">First Train Time (HH:mm <i>Military Time</i>)</label>
+              <label for="start-input">First Train (HH:mm <i>24-hour</i>)</label>
               <input class="form-control" id="start-input" type="text">
             </div>
             <div class="form-group row">
@@ -87,9 +85,7 @@
             </div>
             <button class="btn btn-primary" id="add-item-btn" type="submit">Submit</button>
           </form>
-          
-        </div>
-        
+        </div>   
       </div>
       
     </div>
